@@ -82,6 +82,7 @@ html, body {
 }
 
 .slide.active {
+  opacity: 1;
   pointer-events: auto;
 }
 
@@ -89,6 +90,24 @@ html, body {
 .stagger {
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* CSS fallback: make stagger children visible on active slide
+   anime.js will override these with its own animations */
+.slide.active .stagger {
+  animation: staggerFallback 0.4s ease-out forwards;
+}
+.slide.active .stagger:nth-child(1) { animation-delay: 0.05s; }
+.slide.active .stagger:nth-child(2) { animation-delay: 0.1s; }
+.slide.active .stagger:nth-child(3) { animation-delay: 0.15s; }
+.slide.active .stagger:nth-child(4) { animation-delay: 0.2s; }
+.slide.active .stagger:nth-child(5) { animation-delay: 0.25s; }
+.slide.active .stagger:nth-child(6) { animation-delay: 0.3s; }
+.slide.active .stagger:nth-child(7) { animation-delay: 0.35s; }
+.slide.active .stagger:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes staggerFallback {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Cards / timeline items get a subtle scale too */
