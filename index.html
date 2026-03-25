@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macbeth: Anatomy of a Tragedy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Slide Counter -->
+  <div class="slide-counter" id="slideCounter">1 / 9</div>
+
+  <!-- Navigation -->
+  <nav class="nav-controls">
+    <button class="nav-btn" id="prevBtn" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="nav-btn" id="nextBtn" aria-label="Next slide">
+      <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </nav>
+
+  <!-- Slides -->
+  <div class="slides-container">
+
+    <!-- SLIDE 1: Title -->
+    <div class="slide active" data-slide="0">
+      <div class="slide-inner title-slide">
+        <div class="stagger">
+          <svg class="greek-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+            <circle cx="32" cy="28" r="18"/>
+            <path d="M24 24 a2 2 0 1 1 4 0"/>
+            <path d="M36 24 a2 2 0 1 1 4 0"/>
+            <path d="M22 34 q10 10 20 0"/>
+            <path d="M14 28 v16 M50 28 v16"/>
+          </svg>
+        </div>
+        <h1 class="stagger">Macbeth</h1>
+        <p class="title-subtitle stagger">Anatomy of a Tragedy</p>
+        <div class="divider stagger" style="margin: 1.5rem auto;"></div>
+        <p class="stagger" style="font-size:0.9rem;">William Shakespeare &middot; c. 1606</p>
+        <p class="title-meta stagger">Press <kbd>&rarr;</kbd> or <kbd>Space</kbd> to navigate</p>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: What is Tragedy? -->
+    <div class="slide" data-slide="1">
+      <div class="slide-inner">
+        <span class="chip stagger">Foundations</span>
+        <h2 class="stagger">What is a Tragedy?</h2>
+        <div class="divider stagger"></div>
+        <div class="two-col stagger" style="margin-top:1rem;">
+          <div>
+            <p>A <strong class="text-light">tragedy</strong> is a dramatic work depicting the downfall of a noble or great character. Rooted in Ancient Greek theatre, it tells the story of a hero whose own flaws lead to their destruction.</p>
+            <blockquote style="margin-top:0.75rem;">
+              "Tragedy is an imitation of an action that is serious, complete, and of a certain magnitude&hellip; through pity and fear effecting the proper purgation of these emotions."
+              <cite>&mdash; Aristotle, <em>Poetics</em> (c. 335 BCE)</cite>
+            </blockquote>
+          </div>
+          <div>
+            <h3 style="margin-bottom:0.75rem;">Key Elements</h3>
+            <ul class="clean">
+              <li><strong class="text-light">Tragic Hero</strong> &mdash; A protagonist of noble stature with a fatal flaw</li>
+              <li><strong class="text-light">Hamartia</strong> &mdash; The hero's tragic flaw or error in judgment</li>
+              <li><strong class="text-light">Peripeteia</strong> &mdash; A sudden reversal of fortune</li>
+              <li><strong class="text-light">Anagnorisis</strong> &mdash; The hero's moment of recognition</li>
+              <li><strong class="text-light">Catharsis</strong> &mdash; Emotional purging in the audience</li>
+              <li><strong class="text-light">Catastrophe</strong> &mdash; The final devastating outcome</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Freytag's Pyramid -->
+    <div class="slide" data-slide="2">
+      <div class="slide-inner">
+        <span class="chip stagger">Structure</span>
+        <h2 class="stagger">Freytag's Pyramid</h2>
+        <p class="stagger" style="max-width:620px;">Gustav Freytag (1863) identified a five-act structure common to classical tragedies &mdash; a dramatic arc that rises to a climax, then plunges toward catastrophe.</p>
+        <div class="stagger pyramid-container" style="margin-top:2rem;">
+          <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+            <!-- Shaded area -->
+            <polygon class="pyramid-area" points="50,260 350,50 650,260"/>
+            <!-- Main line -->
+            <polyline class="pyramid-line" points="50,260 350,50 650,260"/>
+            <!-- Dots -->
+            <circle class="pyramid-dot" cx="50" cy="260" r="6"/>
+            <circle class="pyramid-dot" cx="200" cy="155" r="6"/>
+            <circle class="pyramid-dot" cx="350" cy="50" r="6"/>
+            <circle class="pyramid-dot" cx="500" cy="155" r="6"/>
+            <circle class="pyramid-dot" cx="650" cy="260" r="6"/>
+            <!-- Labels -->
+            <text class="pyramid-label" x="50" y="290" text-anchor="middle">Exposition</text>
+            <text class="pyramid-sublabel" x="50" y="308" text-anchor="middle">Act I</text>
+
+            <text class="pyramid-label" x="200" y="128" text-anchor="middle">Rising Action</text>
+            <text class="pyramid-sublabel" x="200" y="143" text-anchor="middle">Act II</text>
+
+            <text class="pyramid-label" x="350" y="30" text-anchor="middle">Climax</text>
+            <text class="pyramid-sublabel" x="350" y="47" text-anchor="middle">Act III</text>
+
+            <text class="pyramid-label" x="500" y="128" text-anchor="middle">Falling Action</text>
+            <text class="pyramid-sublabel" x="500" y="143" text-anchor="middle">Act IV</text>
+
+            <text class="pyramid-label" x="650" y="290" text-anchor="middle">Catastrophe</text>
+            <text class="pyramid-sublabel" x="650" y="308" text-anchor="middle">Act V</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: Pyramid Applied to Macbeth -->
+    <div class="slide" data-slide="3">
+      <div class="slide-inner">
+        <span class="chip stagger">Structure &times; Macbeth</span>
+        <h2 class="stagger">The Pyramid in Macbeth</h2>
+        <div class="divider stagger"></div>
+        <div class="purpose-grid stagger" style="margin-top:1rem;">
+          <div class="card stagger">
+            <h3 class="gold">I &middot; Exposition</h3>
+            <p>Scotland is at war. Macbeth is a brave, respected general. The three witches prophesy he will become king, planting the seed of ambition.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="gold">II &middot; Rising Action</h3>
+            <p>Spurred by Lady Macbeth, he murders King Duncan and seizes the throne. Paranoia grows; he orders the killing of Banquo.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="gold">III &middot; Climax</h3>
+            <p>Banquo's ghost haunts the banquet. Macbeth revisits the witches and receives deceptive new prophecies, deepening his false sense of invincibility.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="gold">IV &middot; Falling Action</h3>
+            <p>Lady Macbeth unravels into madness. Malcolm raises an army in England. Scotland's lords abandon Macbeth. His tyranny isolates him completely.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="gold">V &middot; Catastrophe</h3>
+            <p>Lady Macbeth dies. Birnam Wood "moves" to Dunsinane. Macduff &mdash; not "of woman born" &mdash; kills Macbeth. Malcolm restores order as king.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: Macbeth's Tragic Arc -->
+    <div class="slide" data-slide="4">
+      <div class="slide-inner">
+        <span class="chip stagger">Character Arc</span>
+        <h2 class="stagger">Macbeth's Tragic Arc</h2>
+        <div class="divider stagger"></div>
+        <div class="two-col stagger" style="margin-top:1rem;">
+          <div class="timeline">
+            <div class="timeline-item stagger">
+              <div class="timeline-act">Act I</div>
+              <div class="timeline-title">Noble Warrior</div>
+              <div class="timeline-desc">"Brave Macbeth &mdash; well he deserves that name." He is loyal, valiant, and honoured by King Duncan.</div>
+            </div>
+            <div class="timeline-item stagger">
+              <div class="timeline-act">Act I &mdash; The Prophecy</div>
+              <div class="timeline-title">Seeds of Ambition</div>
+              <div class="timeline-desc">The witches' words ignite a hidden desire. He begins to contemplate murder: "If chance will have me king, why, chance may crown me."</div>
+            </div>
+            <div class="timeline-item highlight stagger">
+              <div class="timeline-act">Act II &mdash; The Murder</div>
+              <div class="timeline-title">Point of No Return</div>
+              <div class="timeline-desc">He murders Duncan in his sleep. Immediate guilt shatters him: "Will all great Neptune's ocean wash this blood clean from my hand?"</div>
+            </div>
+            <div class="timeline-item stagger">
+              <div class="timeline-act">Act III</div>
+              <div class="timeline-title">Tyrant King</div>
+              <div class="timeline-desc">Orders Banquo's assassination. Haunted by his ghost at the feast &mdash; paranoia consumes him.</div>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item stagger">
+              <div class="timeline-act">Act IV</div>
+              <div class="timeline-title">Deepening Darkness</div>
+              <div class="timeline-desc">Massacres Macduff's family. Seeks the witches again. His moral compass is completely destroyed.</div>
+            </div>
+            <div class="timeline-item stagger">
+              <div class="timeline-act">Act V &mdash; Lady Macbeth's Death</div>
+              <div class="timeline-title">Nihilistic Despair</div>
+              <div class="timeline-desc">"Life's but a walking shadow, a poor player that struts and frets his hour upon the stage, and then is heard no more."</div>
+            </div>
+            <div class="timeline-item highlight stagger">
+              <div class="timeline-act">Act V &mdash; Final Battle</div>
+              <div class="timeline-title">Defiant Fall</div>
+              <div class="timeline-desc">Realises the prophecies were tricks. Fights Macduff knowing he will die: "Yet I will try the last." A final flash of his former courage.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Hamartia -->
+    <div class="slide" data-slide="5">
+      <div class="slide-inner">
+        <span class="chip stagger">Hamartia</span>
+        <h2 class="stagger">What Makes Macbeth a Tragic Hero?</h2>
+        <div class="divider stagger"></div>
+        <div class="two-col stagger" style="margin-top:1rem;">
+          <div>
+            <h3 class="stagger" style="margin-bottom:0.5rem;">The Tragic Hero Checklist</h3>
+            <ul class="clean stagger">
+              <li><strong class="text-light">Noble stature</strong> &mdash; Thane of Glamis, then Cawdor; a celebrated war hero respected by the king</li>
+              <li><strong class="text-light">Hamartia (fatal flaw)</strong> &mdash; <em>Vaulting ambition</em>, unchecked by moral restraint</li>
+              <li><strong class="text-light">Free choice</strong> &mdash; He chooses murder; no one forces the dagger into his hand</li>
+              <li><strong class="text-light">Punishment exceeds the crime</strong> &mdash; Total self-destruction, loss of sanity, love, honour, and life</li>
+              <li><strong class="text-light">Self-awareness</strong> &mdash; He knows what he does is wrong even before he does it</li>
+            </ul>
+            <blockquote class="stagger" style="margin-top:0.75rem;">
+              "I have no spur to prick the sides of my intent, but only vaulting ambition, which o'erleaps itself&hellip;"
+              <cite>&mdash; Macbeth, Act I Scene 7</cite>
+            </blockquote>
+          </div>
+          <div>
+            <h3 class="stagger" style="margin-bottom:0.5rem;">The Weight of His Flaws</h3>
+            <div class="hamartia-visual stagger">
+              <div class="trait-bar">
+                <span class="trait-label">Ambition</span>
+                <div class="trait-track"><div class="trait-fill" style="width:95%"></div></div>
+              </div>
+              <div class="trait-bar">
+                <span class="trait-label">Guilt</span>
+                <div class="trait-track"><div class="trait-fill" style="width:80%"></div></div>
+              </div>
+              <div class="trait-bar">
+                <span class="trait-label">Paranoia</span>
+                <div class="trait-track"><div class="trait-fill" style="width:85%"></div></div>
+              </div>
+              <div class="trait-bar">
+                <span class="trait-label">Courage</span>
+                <div class="trait-track"><div class="trait-fill" style="width:70%"></div></div>
+              </div>
+              <div class="trait-bar">
+                <span class="trait-label">Moral Sense</span>
+                <div class="trait-track"><div class="trait-fill" style="width:40%"></div></div>
+              </div>
+            </div>
+            <div class="card stagger" style="margin-top:0.75rem;">
+              <h3>Why it matters</h3>
+              <p>Macbeth is not a villain &mdash; he is a <strong class="text-light">good man corrupted</strong>. His awareness of his own evil makes him tragic, not merely wicked. We watch someone with moral clarity choose darkness anyway.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Hamartia Deep Dive -->
+    <div class="slide" data-slide="6">
+      <div class="slide-inner">
+        <span class="chip stagger">Hamartia Deep Dive</span>
+        <h2 class="stagger">Ambition: The Dagger of the Mind</h2>
+        <div class="divider stagger"></div>
+        <div class="two-col stagger" style="margin-top:1rem;">
+          <div>
+            <p class="stagger">Macbeth's <em>hamartia</em> &mdash; his fatal flaw &mdash; is not merely ambition, but <strong class="text-light">ambition unmoored from morality</strong>. Shakespeare shows this through a careful arc:</p>
+            <div class="card stagger" style="margin-top:0.75rem;">
+              <h3>1. Temptation</h3>
+              <p>The witches do not command Macbeth &mdash; they simply reveal a possibility. His ambition already exists within him; the prophecy merely gives it voice.</p>
+            </div>
+            <div class="card stagger" style="margin-top:0.75rem;">
+              <h3>2. Internal Battle</h3>
+              <p>"Is this a dagger which I see before me?" &mdash; Macbeth hallucinates before the murder, showing the war between conscience and desire.</p>
+            </div>
+            <div class="card stagger" style="margin-top:0.75rem;">
+              <h3>3. Moral Collapse</h3>
+              <p>Each murder comes easier. From agonising over Duncan to casually ordering the slaughter of Macduff's family &mdash; ambition devours his humanity step by step.</p>
+            </div>
+          </div>
+          <div>
+            <div class="card stagger" style="border-color: var(--accent); background: rgba(192,57,43,0.05);">
+              <h3 class="accent">Lady Macbeth as Catalyst</h3>
+              <p>She doesn't create his ambition &mdash; she <strong class="text-light">removes his hesitation</strong>. She questions his manhood, his courage, and his love. Without her push, the flaw might have remained dormant.</p>
+              <blockquote style="margin-top:0.75rem; border-left-color: var(--gold);">
+                "Look like th' innocent flower, but be the serpent under't."
+                <cite>&mdash; Lady Macbeth, Act I Scene 5</cite>
+              </blockquote>
+            </div>
+            <div class="card stagger" style="margin-top:1rem;">
+              <h3>The Tragic Irony</h3>
+              <p>Macbeth gains everything the witches promised &mdash; kingship, power, invincibility &mdash; yet <strong class="text-light">loses everything that made life worth living</strong>: his honour, his wife, his peace of mind, his friends, and finally his life.</p>
+              <blockquote style="margin-top:0.75rem;">
+                "I have lived long enough. My way of life is fall'n into the sere, the yellow leaf."
+                <cite>&mdash; Macbeth, Act V Scene 3</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: Purpose of Tragedy -->
+    <div class="slide" data-slide="7">
+      <div class="slide-inner">
+        <span class="chip stagger">Ancient Greece</span>
+        <h2 class="stagger">The Purpose of Tragedy</h2>
+        <div class="divider stagger"></div>
+        <p class="stagger" style="max-width:640px;">For the Greeks, tragedy wasn't entertainment &mdash; it was a civic and spiritual practice performed at the Festival of Dionysus, designed to confront humanity's deepest fears.</p>
+        <div class="purpose-grid stagger" style="margin-top:1rem;">
+          <div class="card stagger">
+            <h3 class="accent">Catharsis</h3>
+            <p>Aristotle argued tragedy purges the audience of <strong class="text-light">pity and fear</strong> &mdash; a collective emotional cleansing. Watching Macbeth's fall, we process our own darkest impulses safely.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="accent">Moral Warning</h3>
+            <p>Tragedy shows the consequences of <strong class="text-light">hubris</strong> &mdash; overstepping human limits. Macbeth's ambition mirrors the Greek heroes who defied the gods and paid the price.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="accent">Civic Reflection</h3>
+            <p>Greek tragedies were performed for the entire <em>polis</em> (city-state) &mdash; they asked: What kind of leaders do we want? What happens when power is <strong class="text-light">unchecked</strong>?</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="accent">Understanding Fate</h3>
+            <p>Are we masters of our destiny, or puppets of fate? Macbeth's witches echo the Greek oracles &mdash; the prophecy is fulfilled <em>because</em> Macbeth acts on it.</p>
+          </div>
+          <div class="card stagger">
+            <h3 class="accent">Shared Humanity</h3>
+            <p>We see ourselves in the tragic hero. Macbeth is not alien to us &mdash; his ambition, guilt, and fear are <strong class="text-light">universal</strong>. Tragedy reminds us: <em>this could have been any of us.</em></p>
+          </div>
+          <div class="card stagger">
+            <h3 class="accent">Restoring Order</h3>
+            <p>Tragedy ends with justice &mdash; Malcolm takes the throne, order returns. The Greeks believed suffering must lead to <strong class="text-light">renewal</strong>. Destruction precedes restoration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: Closing -->
+    <div class="slide" data-slide="8">
+      <div class="slide-inner end-slide">
+        <div class="stagger">
+          <svg class="greek-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+            <circle cx="32" cy="28" r="18"/>
+            <path d="M24 24 a2 2 0 1 1 4 0"/>
+            <path d="M36 24 a2 2 0 1 1 4 0"/>
+            <path d="M26 36 q6 -6 12 0"/>
+            <path d="M14 28 v16 M50 28 v16"/>
+          </svg>
+        </div>
+        <h2 class="stagger">"Fair is foul, and foul is fair"</h2>
+        <div class="divider stagger" style="margin: 1.5rem auto;"></div>
+        <blockquote class="stagger">
+          The tragedy of Macbeth endures because it holds a mirror to the darkness within us all &mdash; the ambition we dare not name, the lines we believe we'd never cross, and the terrible speed at which a good person can fall.
+        </blockquote>
+        <p class="stagger" style="margin-top:2rem; font-size:0.85rem; opacity:0.5;">End of presentation</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/slides.js"></script>
+</body>
+</html>
