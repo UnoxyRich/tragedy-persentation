@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Macbeth: Anatomy of a Tragedy</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 </head>
 <body>
+
+  <!-- Background Particles -->
+  <canvas id="bgParticles"></canvas>
 
   <!-- Progress Bar -->
   <div class="progress-bar" id="progressBar"></div>
@@ -83,32 +87,32 @@
         <h2 class="stagger">Freytag's Pyramid</h2>
         <p class="stagger" style="max-width:620px;">Gustav Freytag (1863) identified a five-act structure common to classical tragedies &mdash; a dramatic arc that rises to a climax, then plunges toward catastrophe.</p>
         <div class="stagger pyramid-container" style="margin-top:2rem;">
-          <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg">
             <!-- Shaded area -->
-            <polygon class="pyramid-area" points="50,260 350,50 650,260"/>
+            <polygon class="pyramid-area" points="50,280 350,70 650,280"/>
             <!-- Main line -->
-            <polyline class="pyramid-line" points="50,260 350,50 650,260"/>
+            <polyline class="pyramid-line" points="50,280 350,70 650,280"/>
             <!-- Dots -->
-            <circle class="pyramid-dot" cx="50" cy="260" r="6"/>
-            <circle class="pyramid-dot" cx="200" cy="155" r="6"/>
-            <circle class="pyramid-dot" cx="350" cy="50" r="6"/>
-            <circle class="pyramid-dot" cx="500" cy="155" r="6"/>
-            <circle class="pyramid-dot" cx="650" cy="260" r="6"/>
+            <circle class="pyramid-dot" cx="50" cy="280" r="6"/>
+            <circle class="pyramid-dot" cx="200" cy="175" r="6"/>
+            <circle class="pyramid-dot" cx="350" cy="70" r="6"/>
+            <circle class="pyramid-dot" cx="500" cy="175" r="6"/>
+            <circle class="pyramid-dot" cx="650" cy="280" r="6"/>
             <!-- Labels -->
-            <text class="pyramid-label" x="50" y="290" text-anchor="middle">Exposition</text>
-            <text class="pyramid-sublabel" x="50" y="308" text-anchor="middle">Act I</text>
+            <text class="pyramid-label" x="50" y="310" text-anchor="middle">Exposition</text>
+            <text class="pyramid-sublabel" x="50" y="328" text-anchor="middle">Act I</text>
 
-            <text class="pyramid-label" x="200" y="128" text-anchor="middle">Rising Action</text>
-            <text class="pyramid-sublabel" x="200" y="143" text-anchor="middle">Act II</text>
+            <text class="pyramid-label" x="200" y="148" text-anchor="middle">Rising Action</text>
+            <text class="pyramid-sublabel" x="200" y="163" text-anchor="middle">Act II</text>
 
-            <text class="pyramid-label" x="350" y="30" text-anchor="middle">Climax</text>
-            <text class="pyramid-sublabel" x="350" y="47" text-anchor="middle">Act III</text>
+            <text class="pyramid-label" x="350" y="38" text-anchor="middle">Climax</text>
+            <text class="pyramid-sublabel" x="350" y="53" text-anchor="middle">Act III</text>
 
-            <text class="pyramid-label" x="500" y="128" text-anchor="middle">Falling Action</text>
-            <text class="pyramid-sublabel" x="500" y="143" text-anchor="middle">Act IV</text>
+            <text class="pyramid-label" x="500" y="148" text-anchor="middle">Falling Action</text>
+            <text class="pyramid-sublabel" x="500" y="163" text-anchor="middle">Act IV</text>
 
-            <text class="pyramid-label" x="650" y="290" text-anchor="middle">Catastrophe</text>
-            <text class="pyramid-sublabel" x="650" y="308" text-anchor="middle">Act V</text>
+            <text class="pyramid-label" x="650" y="310" text-anchor="middle">Catastrophe</text>
+            <text class="pyramid-sublabel" x="650" y="328" text-anchor="middle">Act V</text>
           </svg>
         </div>
       </div>
@@ -352,6 +356,7 @@
 
   </div>
 
+  <script src="js/particles.js"></script>
   <script src="js/slides.js"></script>
 </body>
 </html>

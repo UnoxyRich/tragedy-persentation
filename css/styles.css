@@ -13,6 +13,7 @@
   --gold: #d4a843;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-serif: "Georgia", "Times New Roman", serif;
+  --z-bg: 0;
   --z-slide: 1;
   --z-nav: 100;
   --z-progress: 200;
@@ -23,6 +24,7 @@
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
+  #bgParticles { display: none; }
 }
 
 html, body {
@@ -33,6 +35,16 @@ html, body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   user-select: none;
+}
+
+/* ── Background Particles Canvas ──────────────────────── */
+#bgParticles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-bg);
+  pointer-events: none;
 }
 
 /* ── Progress Bar ─────────────────────────────────────── */
@@ -65,36 +77,23 @@ html, body {
   overflow-y: auto;
   overflow-x: hidden;
   opacity: 0;
-  transform: translateX(60px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   pointer-events: none;
+  will-change: transform, opacity;
 }
 
 .slide.active {
-  opacity: 1;
-  transform: translateX(0);
   pointer-events: auto;
 }
 
-.slide.exit-left {
+/* ── Staggered children (initial state — anime.js animates them) ── */
+.stagger {
   opacity: 0;
-  transform: translateX(-60px);
+  transform: translateY(20px);
 }
 
-/* ── Staggered children entrance ──────────────────────── */
-.slide.active .stagger { animation: fadeUp 0.45s ease-out both; }
-.slide.active .stagger:nth-child(1) { animation-delay: 0.08s; }
-.slide.active .stagger:nth-child(2) { animation-delay: 0.16s; }
-.slide.active .stagger:nth-child(3) { animation-delay: 0.24s; }
-.slide.active .stagger:nth-child(4) { animation-delay: 0.32s; }
-.slide.active .stagger:nth-child(5) { animation-delay: 0.4s; }
-.slide.active .stagger:nth-child(6) { animation-delay: 0.48s; }
-.slide.active .stagger:nth-child(7) { animation-delay: 0.56s; }
-.slide.active .stagger:nth-child(8) { animation-delay: 0.64s; }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Cards / timeline items get a subtle scale too */
+.card, .timeline-item {
+  will-change: transform, opacity;
 }
 
 /* ── Typography ────────────────────────────────────────── */
@@ -235,15 +234,25 @@ blockquote cite {
   stroke: var(--accent);
   stroke-width: 2.5;
   fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 
 .pyramid-dot {
   fill: var(--accent-light);
+  opacity: 0;
+  transform-origin: center;
+  transform: scale(0);
 }
 
 .pyramid-area {
   fill: rgba(192, 57, 43, 0.08);
   stroke: none;
+  opacity: 0;
+}
+
+.pyramid-label, .pyramid-sublabel {
+  opacity: 0;
 }
 
 /* ── Timeline ──────────────────────────────────────────── */
@@ -362,9 +371,15 @@ blockquote cite {
 
 /* ── Purpose grid ──────────────────────────────────────── */
 .purpose-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
+  justify-content: center;
+}
+
+.purpose-grid > * {
+  flex: 0 1 calc(33.333% - 0.5rem);
+  min-width: 180px;
 }
 
 /* ── List styles ───────────────────────────────────────── */
@@ -443,10 +458,8 @@ ul.clean li::before {
   background: var(--accent);
   transform-origin: left;
   transform: scaleX(0);
-  transition: transform 0.6s ease-out;
+  will-change: transform;
 }
-
-.slide.active .trait-fill { transform: scaleX(1); }
 
 /* ── End slide ─────────────────────────────────────────── */
 .end-slide {
